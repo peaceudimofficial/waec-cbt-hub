@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="WAEC CBT Practice Hub">
+  <title>WAEC CBT Practice Hub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <div class="brand">🎓 WAEC CBT PRACTICE HUB</div>
+      <h1>Prepare smarter. Practice better.</h1>
+      <p>Register, pay securely, receive your CBT access code and practise WAEC-style questions.</p>
+    </header>
+
+    <section id="home" class="card">
+      <h2>🔐 Enter your CBT access code</h2>
+      <p class="muted">Your access code is issued after successful payment.</p>
+      <input id="codeInput" maxlength="7" placeholder="e.g. 3-1C4PV" autocomplete="off">
+      <button onclick="login()">Continue to CBT →</button>
+      <p id="loginMsg" class="msg"></p>
+      <hr>
+      <h3>Don't have an access code?</h3>
+      <p>Register and pay to activate your CBT practice access.</p>
+      <button class="secondary" onclick="showRegister()">Register & Pay</button>
+    </section>
+
+    <section id="register" class="card hidden">
+      <h2>📝 Student Registration</h2>
+      <input id="studentName" placeholder="Full name" autocomplete="name">
+      <input id="studentEmail" type="email" placeholder="Email address" autocomplete="email">
+      <input id="studentPhone" placeholder="WhatsApp/phone number" autocomplete="tel">
+      <select id="package">
+        <option value="1000">1 Subject — ₦1,000</option>
+        <option value="2500">3 Subjects — ₦2,500</option>
+        <option value="4000">All Subjects — ₦4,000</option>
+      </select>
+      <button onclick="startPayment()">Continue to Paystack →</button>
+      <p class="small">You will be redirected to Paystack's secure checkout. Your access is activated only after payment is verified on the server.</p>
+      <button class="linkbtn" onclick="showHome()">← Back</button>
+      <p id="registerMsg" class="msg"></p>
+    </section>
+
+    <section id="processing" class="card hidden success">
+      <div class="check">…</div>
+      <h2>Checking your payment</h2>
+      <p>Please wait while we verify your Paystack transaction.</p>
+    </section>
+
+    <section id="success" class="card hidden success">
+      <div class="check">✓</div>
+      <h2>Payment Successful</h2>
+      <p>Your WAEC CBT access has been activated.</p>
+      <p class="muted">Keep your access code safe.</p>
+      <div class="codebox">
+        <span>YOUR CBT ACCESS CODE</span>
+        <strong id="newCode"></strong>
+      </div>
+      <div class="notice">
+        <b>Important</b>
+        <p>If you forget your code, this platform requires a new registration and payment to receive a new code.</p>
+      </div>
+      <button onclick="enterCBT()">Continue to CBT →</button>
+      <button class="whatsapp" onclick="openWhatsApp()">Join our WhatsApp Support Community</button>
+    </section>
+
+    <section id="subjects" class="card hidden">
+      <h2>📚 Choose a Subject</h2>
+      <p id="packageInfo" class="muted"></p>
+      <div id="subjectList" class="grid"></div>
+      <button class="linkbtn" onclick="logout()">Log out</button>
+    </section>
+
+    <section id="quiz" class="card hidden">
+      <div class="quiztop">
+        <span id="progress"></span>
+        <span id="timer"></span>
+      </div>
+      <h2 id="question"></h2>
+      <div id="options"></div>
+      <button id="nextBtn" onclick="nextQuestion()">Next →</button>
+    </section>
+
+    <section id="result" class="card hidden success">
+      <div class="check">✓</div>
+      <h2>Test Completed</h2>
+      <p id="score"></p>
+      <button onclick="showSubjects()">Practice Another Subject</button>
+      <button class="linkbtn" onclick="logout()">Log out</button>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
