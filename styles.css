@@ -1,0 +1,33 @@
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:#f7f4f1;color:#251c1e}
+.app{max-width:720px;margin:auto;padding:18px}
+.hero{padding:28px 8px 18px}
+.brand{font-weight:800;letter-spacing:.4px;color:#7a2740}
+.hero h1{font-size:34px;line-height:1.08;margin:12px 0}
+.hero p{color:#6d6264}
+.card{background:#fff;border:1px solid #eadfd9;border-radius:22px;padding:24px;margin:14px 0;box-shadow:0 8px 30px rgba(50,20,20,.05)}
+.hidden{display:none}
+.muted,.small{color:#766c6d}
+.small{font-size:13px;line-height:1.5}
+input,select{display:block;width:100%;padding:15px;margin:10px 0;border:1px solid #d9ccca;border-radius:12px;font-size:16px;background:#fff}
+button{width:100%;padding:16px;border:0;border-radius:13px;background:#7a2740;color:#fff;font-size:16px;font-weight:700;margin:8px 0;cursor:pointer}
+button:disabled{opacity:.6}
+.secondary{background:#efe5e7;color:#7a2740}
+.linkbtn{background:transparent;color:#7a2740}
+.success{text-align:center}
+.check{width:64px;height:64px;border-radius:50%;background:#d9f8e5;color:#187d45;display:grid;place-items:center;font-size:38px;margin:0 auto 14px}
+.codebox{background:#faf7f4;border:1px solid #eadfd9;border-radius:18px;padding:20px;margin:20px 0}
+.codebox span{display:block;color:#8a8081;font-size:13px}
+.codebox strong{display:block;font-size:34px;letter-spacing:6px;color:#7a2740;margin-top:8px}
+.notice{background:#fffaf5;border:1px solid #eee0cf;border-radius:16px;padding:16px;text-align:left;margin:15px 0}
+.whatsapp{background:#e7f8ed;color:#147a42}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.subject{padding:20px;border:1px solid #e7dcda;border-radius:16px;background:#fff;text-align:left;cursor:pointer}
+.subject b{display:block;margin-bottom:6px}
+.subject span{font-size:13px;color:#7a7071}
+.option{width:100%;text-align:left;background:#fff;color:#2b2425;border:1px solid #ded3d1;font-weight:600}
+.option.selected{background:#f2e4e8;border-color:#7a2740;color:#7a2740}
+.quiztop{display:flex;justify-content:space-between;color:#7a2740;font-weight:700}
+.msg{color:#b42318;min-height:20px}
+hr{border:0;border-top:1px solid #eee5e2;margin:22px 0}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.hero h1{font-size:29px}.codebox strong{font-size:27px;letter-spacing:4px}}
