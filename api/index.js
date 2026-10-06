@@ -458,11 +458,7 @@ module.exports = async (req, res) => {
     return json(res, 400, {
       error: "Unknown action."
     });
-
-    } catch (err) {
-    return json(res, 400, {
-      error: err.message || "Request failed."
-      } catch (err) {
+ } catch (err) {
     return json(res, 400, {
       error: err.message || "Request failed."
     });
