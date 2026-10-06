@@ -459,6 +459,12 @@ module.exports = async (req, res) => {
       error: "Unknown action."
     });
 
-  } catch (err) {
+    } catch (err) {
     return json(res, 400, {
-      error: err
+      error: err.message || "Request failed."
+      } catch (err) {
+    return json(res, 400, {
+      error: err.message || "Request failed."
+    });
+  }
+};
